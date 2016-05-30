@@ -53,9 +53,9 @@
             "mobile_number": "",
             "office_number": ""
           }
-        },
+        }
       ]
-    },
+     },
     "build_requirements": {
       "platform": {
         "os": "ubuntu",
