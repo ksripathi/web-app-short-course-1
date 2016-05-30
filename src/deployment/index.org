@@ -251,4 +251,20 @@ exit 0;
 #+END_SRC
 
 
+* Deploying the application
+   For deploying the application, we use WSGI standard for Python
+   applications.
+   For that we need to write a WSGI script as follows.
+#+BEGIN_SRC python :tangle ../userdirectory.wsgi :eval no
+import sys, os
 
+BASE_DIR = BASE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)))
+
+sys.path.insert(0, BASE_DIR)
+
+from src.app import create_app
+from src import config
+
+application = create_app(config)
+
+#+END_SRC
