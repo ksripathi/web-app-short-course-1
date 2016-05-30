@@ -67,6 +67,7 @@ chmod -R 777 /var/www/logs
 bash /var/www/setup.sh
 python /var/www/setup.py install
 bash /var/www/configure.sh
+python /var/www/db_setup.py
 #+END_SRC
 ** Update =config.py= file
 update the =APP_URL= value with the ip-address and port number to run the application.
